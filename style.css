@@ -1,0 +1,63 @@
+/* :target
+    em
+    variable
+    calc() */
+
+
+/* HM1: diferenta dintre EM/REM */
+
+body{
+
+    --light-color: rgb(9, 138, 138);
+    --dark-color: #333;
+    --text-color: whitesmoke;
+   
+}
+
+body{
+    background-color: var(--dark-color);
+    
+}
+
+#bottom-menu{
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#bottom-menu ul{
+    margin-bottom: 0.5em;
+}
+
+#bottom-menu a{
+    background-color: var(--light-color);
+    display: block;
+    padding: 0.5em;
+    margin-left:0.4em;
+    margin-right:0.4em;
+    margin-bottom: 0.4em;
+    border-radius: 50%;
+    color: var(--text-color);
+
+    /* HW2 - center text*/
+    text-align: center;
+
+    /* HW3 - slow effect */
+    transition: 1s;
+    transform: translateY(7.4em);
+
+    /* H4 - Shadow effect */
+    box-shadow: 0px 3px 5px #aaa, inset 0px 2px 3px rgba(255, 255, 255, 0.746);
+}
+
+#bottom-menu:target a{
+    transform: translateY(0);
+}
+
+#bottom-menu li:last-child a{
+    margin-bottom: 5px;
+}
+
